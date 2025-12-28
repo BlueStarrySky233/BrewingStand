@@ -138,8 +138,9 @@ namespace ModVersionConvertor
             progressBar.Step = 1;
 
             string outputDirectory = 
-                txtOutput.Text ??
-                Path.Combine(Directory.GetParent(modsPath)?.FullName ?? "", $"{loader}_Mods");
+                txtOutput.Text == "" ?
+                Path.Combine(Directory.GetParent(modsPath)?.FullName ?? "", $"{loader}_mods")
+                : txtOutput.Text;
             Directory.CreateDirectory(outputDirectory);
             UpdateLog($"Output directory: {outputDirectory}\n");
 
@@ -289,10 +290,6 @@ namespace ModVersionConvertor
             {
                 string sha1 = await HashFileAsync(jarFile, "sha1");
 
-                BeginInvoke(() =>
-                {
-                    sha1Label.Text = sha1;
-                });
 
                 var res = await client.GetAsync
                     ($"https://api.modrinth.com/v2/version_file/{sha1}?algorithm=sha1");

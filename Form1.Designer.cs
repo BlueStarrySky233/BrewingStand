@@ -32,7 +32,6 @@
             btnStart = new Button();
             rtbLog = new RichTextBox();
             progressBar = new ProgressBar();
-            sha1Label = new Label();
             groupBox1 = new GroupBox();
             label4 = new Label();
             btnBrowseOutput = new Button();
@@ -73,15 +72,6 @@
             progressBar.Name = "progressBar";
             progressBar.Size = new Size(997, 47);
             progressBar.TabIndex = 6;
-            // 
-            // sha1Label
-            // 
-            sha1Label.AutoSize = true;
-            sha1Label.BackColor = Color.Aqua;
-            sha1Label.Location = new Point(23, 661);
-            sha1Label.Name = "sha1Label";
-            sha1Label.Size = new Size(0, 24);
-            sha1Label.TabIndex = 7;
             // 
             // groupBox1
             // 
@@ -222,7 +212,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1154, 692);
             Controls.Add(groupBox1);
-            Controls.Add(sha1Label);
             Controls.Add(progressBar);
             Controls.Add(rtbLog);
             Controls.Add(btnStart);
@@ -230,19 +219,17 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Brewing Stand";
+            Text = "Brewing Stand 1.0.0";
             Load += Form1_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
         private Button btnStart;
         private RichTextBox rtbLog;
         private ProgressBar progressBar;
-        private Label sha1Label;
         private GroupBox groupBox1;
         private Label label2;
         private Label label1;
