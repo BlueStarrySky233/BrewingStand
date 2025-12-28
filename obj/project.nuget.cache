@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "EyoS+2CnxxQ=",
+  "success": true,
+  "projectFilePath": "D:\\Documents\\Visual Studio 2022\\Projects\\ModVersionConvertor\\BrewingStand.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ROG\\.nuget\\packages\\newtonsoft.json\\13.0.4\\newtonsoft.json.13.0.4.nupkg.sha512"
+  ],
+  "logs": []
+}
